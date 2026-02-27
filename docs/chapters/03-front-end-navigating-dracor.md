@@ -9,6 +9,14 @@ keywords: ["DraCor", "front-end", "play page", "corpus page", "network", "speech
 license: "CC BY 4.0"
 ---
 
+````{margin}
+```{admonition} How to cite this chapter
+:class: tip
+```{bibliography}
+:filter: key == "dracor_chapter_research_question_2026"
+:style: apa
+````
+
 # Front-end: Navigating DraCor
 
 ```{warning}
