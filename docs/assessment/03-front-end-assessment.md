@@ -230,7 +230,7 @@ q9 = [{
 display_quiz(q9, max_width=1000)
 ```
 
-## Question 10 (short written task)
+## Question 10
 
 Pick any play in any corpus and write a reproducible “record note” with:
 - corpus name
