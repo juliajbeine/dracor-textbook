@@ -1,3 +1,12 @@
+````{margin}
+```{admonition} How to cite this chapter
+:class: tip
+```{bibliography}
+:filter: key == "dracor_textbook_preface_2026"
+:style: apa
+````
+
+
 ## Preface
 
 The **DraCor Textbook** is a curated, pedagogically structured Open Educational Resource (OER) developed by the DraCorOS team. It is conceived as a coherent teaching and learning resource for working with **DraCor’s programmable drama corpora**, with a particular focus on accessibility for learners with little or no prior background in Digital Humanities or programming.
