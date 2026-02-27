@@ -192,10 +192,9 @@ Self-check: could someone else retrieve the same file and understand what it rep
 
 ```{admonition} Self-test
 :class: tip
-{doc}`Open the self-test <assessment/03-front-end-assessment>`.
+Open the [Self-test: Front-end](../assessment/03-front-end-assessment).
 ```
 
-[Self-test: Front-end](../assessment/03-front-end-assessment)
 
 ## 7. Teaching Notes
 
