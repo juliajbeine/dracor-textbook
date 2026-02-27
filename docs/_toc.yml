@@ -1,5 +1,8 @@
 format: jb-book
 root: index
-chapters:
-  - file: chapters/03-front-end-navigating-dracor
-    title: "3. Front-end: Navigating DraCor"
+
+parts:
+  - caption: Chapters
+    chapters:
+      - file: chapters/03-front-end-navigating-dracor
+        title: "3. Front-end: Navigating DraCor"
