@@ -253,8 +253,8 @@ create_answer_box(
 
 ````{admonition} Example answer (for self-check)
 :class: tip, dropdown
-Corpus: CalDraCor  
-Play ID: calderon-vidaessueno  
+Corpus: CalDraCor (cal)  
+Play ID: la-vida-es-sueno  
 Tab: Network  
 Observation: The interface constructs edges by co-occurrence within segments; the summary panel reports the number of segments and basic network statistics (density, diameter, clustering), which can be documented alongside the selected play ID.
 ````
