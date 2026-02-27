@@ -1,6 +1,7 @@
 ---
 title: "Front-end: Navigating DraCor"
-substitutions:
+myst:
+  substitutions:
   chap_title: "Front-end"
 author: "Antonio Rojas Castro"
 date: "2026-02-01"
