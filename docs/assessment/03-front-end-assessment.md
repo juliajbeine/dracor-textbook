@@ -10,7 +10,7 @@ kernelspec:
   name: python3
 ---
 
-# Self-test: Front-end – Navigating DraCor
+# Self-test: Front-end
 
 ````{admonition} Note
 :class: note

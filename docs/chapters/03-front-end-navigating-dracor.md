@@ -190,6 +190,11 @@ Download one file that corresponds to a view you used (for example, a network ex
 
 Self-check: could someone else retrieve the same file and understand what it represents?
 
+```{admonition} Self-test
+:class: tip
+{doc}`Open the self-test <assessment/03-front-end-assessment>`.
+```
+
 [Self-test: Front-end](../assessment/03-front-end-assessment)
 
 ## 7. Teaching Notes
