@@ -51,4 +51,6 @@ https://creativecommons.org/licenses/by/4.0/
 
 ## Suggested citation
 
+Rojas Castro, Antonio; Fisher, Frank; Trilcke, Peer; Börner, Ingo; Beine, Julia; Skorinkin, Daniil (2026). *DraCor Textbook*. https://github.com/dracor-org/dracor-textbook
+
 [Chapter Title] from the DraCor Textbook by [Author Names] is licensed under CC BY 4.0.
