@@ -4,8 +4,24 @@ root: index
 parts:
   - caption: Chapters
     chapters:
+      - file: chapters/02-corpus-building
+        title: "2. Corpus Building"
+        sections:
+          - file: assessment/02-corpus-building
+            title: "Self-test: Corpus Building"
       - file: chapters/03-front-end-navigating-dracor
         title: "3. Front-end: Navigating DraCor"
         sections:
           - file: assessment/03-front-end-assessment
             title: "Self-test: Front-end"
+      - file: chapters/04-api-working-with-dracor-programmatically
+        title: "API: Working with DraCor Programmatically"
+        sections:
+          - file: assessment/04-api-working-with-dracor-programmatically
+            title: "Self-test: API"
+      - file: chapters/05-infrastructure
+        title: "Infrastructure"
+        sections:
+          - file: assessment/05-infrastructure
+            title: "Self-test: Infrastructure"
+  - caption: Case Studies
