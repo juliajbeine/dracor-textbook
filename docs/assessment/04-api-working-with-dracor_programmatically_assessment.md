@@ -10,7 +10,7 @@ kernelspec:
   name: python3
 ---
 
-# Self-test: API – Working with DraCor Programmatically
+# Self-test: API
 
 ````{admonition} Note
 :class: note
