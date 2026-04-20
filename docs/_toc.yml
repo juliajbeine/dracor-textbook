@@ -10,12 +10,12 @@ parts:
           - file: assessment/03-front-end-assessment
             title: "Self-test: Front-end"
       - file: chapters/04-api-working-with-dracor-programmatically
-        title: "API: Working with DraCor Programmatically"
+        title: "4. API: Working with DraCor Programmatically"
         sections:
           - file: assessment/04-api-working-with-dracor-programmatically
             title: "Self-test: API"
       - file: chapters/05-infrastructure
-        title: "Infrastructure"
+        title: "5. Infrastructure"
         sections:
           - file: assessment/05-infrastructure
             title: "Self-test: Infrastructure"
