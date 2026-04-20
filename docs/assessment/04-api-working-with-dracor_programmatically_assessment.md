@@ -23,7 +23,7 @@ This self-test supports Chapter 4 (*API: Working with DraCor Programmatically*).
 Estimated time: 25–40 minutes.
 ````
 
-## Question 1 (multiple choice)
+## Question 1
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -46,7 +46,7 @@ q1 = [{
 display_quiz(q1, max_width=1000)
 ```
 
-## Question 2 (multiple choice)
+## Question 2
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -69,7 +69,7 @@ q2 = [{
 display_quiz(q2, max_width=1000)
 ```
 
-## Question 3 (multiple choice)
+## Question 3
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -92,7 +92,7 @@ q3 = [{
 display_quiz(q3, max_width=1000)
 ```
 
-## Question 4 (multiple choice)
+## Question 4
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -115,7 +115,7 @@ q4 = [{
 display_quiz(q4, max_width=1000)
 ```
 
-## Question 5 (multiple choice)
+## Question 5
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -138,7 +138,7 @@ q5 = [{
 display_quiz(q5, max_width=1000)
 ```
 
-## Question 6 (multiple choice)
+## Question 6
 
 ```{code-cell} ipython3
 :tags: [remove-input]
@@ -161,7 +161,7 @@ q6 = [{
 display_quiz(q6, max_width=1000)
 ```
 
-## Question 7 (coding) – Request corpora and print a small summary
+## Question 7
 
 Student exercise (copy into a notebook, fill in, run):
 
@@ -223,7 +223,7 @@ except Exception as e:
     print(f"Request failed with error: {e}")
 ```
 
-## Question 8 (coding) – Load corpus metadata as CSV into a DataFrame
+## Question 8
 
 Student exercise (copy into a notebook, fill in, run):
 
@@ -324,7 +324,7 @@ except Exception as e:
     print(f"Request failed with error: {e}")
 ```
 
-## Question 9 (coding) – Handle status codes safely
+## Question 9
 
 Student exercise (copy into a notebook, run). The endpoint is intentionally wrong:
 
@@ -376,7 +376,7 @@ except Exception as e:
     print(f"Request failed with error: {e}")
 ```
 
-## Question 10 (coding) – Request CSV via content negotiation and inspect the output
+## Question 10
 
 Student exercise (copy into a notebook, fill in, run):
 
