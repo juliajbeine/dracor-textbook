@@ -418,13 +418,10 @@ Open the [Assessment: TEI Encoding](../assessment/02-02-tei-encoding-assessment)
 
 ### Exercise 4: Encoding with LLMs
 
-Pick an entire play of your choice that is available to you in plain text and in the public domain. As an option, you may visit [dracor.org](https://dracor.org/) and access the full text of any drama in plain text in the “Full text” tab {cite}`fischerdracororg` (see Chapter 03). Try prompting an LLM of your choice to encode the play in TEI.
-
-Assess the results. Was the LLM able to process the whole play? Did it omit anything? Do you notice any obvious hallucinations? Are there any obvious markup errors?  
-
-If the play could not be processed in one go, try encoding it in chunks. You can also try different strategies: with/without examples of TEI-encoded drama, with/without explicitly mentioning DraCor, with/without explicitly asking to mark speeches, stage directions, and so on. 
-
-Do you see any differences? Reflect on the current state of LLM-powered encoding and its limitations. 
+```{admonition} Assessment
+:class: tip
+Open the [Assessment: TEI Encoding](../assessment/02-02-tei-encoding-assessment).
+```
 
 ## 6. Teaching Notes
 
