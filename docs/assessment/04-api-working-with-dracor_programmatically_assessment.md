@@ -10,22 +10,22 @@ kernelspec:
   name: python3
 ---
 
-# Self-test: API – Working with DraCor Programmatically
+# Self-test: API
 
-::::{admonition} Note
+````{admonition} Note
 :class: note
 This self-test supports Chapter 4 (*API: Working with DraCor Programmatically*). It checks key concepts and basic hands-on skills.
 
 - There is no grading and nothing is stored.
 - Multiple-choice questions provide feedback for every option.
-- Coding tasks are presented as “student exercises” plus an executable reference solution.
+- Coding tasks are presented as (a) a student prompt, (b) a reference solution shown as code, and (c) an executed reference output.
 
 Estimated time: 25–40 minutes.
-::::
+````
 
-## Question 1 (multiple choice)
+## Question 1
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -40,15 +40,15 @@ q1 = [{
     {"answer": "It is only used for downloading GEXF files for Gephi", "correct": False,
      "feedback": "No. Downloads are only one part. The API provides corpora, plays, text layers, characters, networks, and more."},
     {"answer": "It is a local file repository of TEI documents", "correct": False,
-     "feedback": "No. The TEI files exist, but the API is a web service that returns processed data from the backend."}
+     "feedback": "No. TEI exists as a source layer, but the API is a web service that returns processed data from the backend."}
   ]
 }]
 display_quiz(q1, max_width=1000)
-:::
+```
 
-## Question 2 (multiple choice)
+## Question 2
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -67,11 +67,11 @@ q2 = [{
   ]
 }]
 display_quiz(q2, max_width=1000)
-:::
+```
 
-## Question 3 (multiple choice)
+## Question 3
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -90,11 +90,11 @@ q3 = [{
   ]
 }]
 display_quiz(q3, max_width=1000)
-:::
+```
 
-## Question 4 (multiple choice)
+## Question 4
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -113,11 +113,11 @@ q4 = [{
   ]
 }]
 display_quiz(q4, max_width=1000)
-:::
+```
 
-## Question 5 (multiple choice)
+## Question 5
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -136,11 +136,11 @@ q5 = [{
   ]
 }]
 display_quiz(q5, max_width=1000)
-:::
+```
 
-## Question 6 (multiple choice)
+## Question 6
 
-:::{code-cell} ipython3
+```{code-cell} ipython3
 :tags: [remove-input]
 from jupyterquiz import display_quiz
 
@@ -159,11 +159,11 @@ q6 = [{
   ]
 }]
 display_quiz(q6, max_width=1000)
-:::
+```
 
-## Question 7 (coding) – Request corpora and print a small summary
+## Question 7
 
-Student exercise (copy into your notebook, fill in, run):
+Student exercise (copy into a notebook, fill in, run):
 
 ```python
 import requests
@@ -182,27 +182,50 @@ Self-check:
 - You should see an integer number of corpora.
 - You should see 5 lines like `ger: German Drama Corpus` (exact titles vary).
 
-Reference solution (runs during book build):
-
-:::{code-cell} ipython3
-:tags: [remove-input]
+````{admonition} Reference solution (code)
+:class: tip, dropdown
+```python
 import requests
 
 url = "https://dracor.org/api/v1/corpora"
 params = {"include": "metrics"}
 
 r = requests.get(url, params=params, timeout=30)
-r.raise_for_status()
-corpora = r.json()
+if r.status_code != 200:
+    print(f"Request failed with status code: {r.status_code}")
+else:
+    corpora = r.json()
+    print(f"Number of corpora: {len(corpora)}")
+    for c in corpora[:5]:
+        print(f"{c.get('name')}: {c.get('title')}")
+```
+````
 
-print(f"Number of corpora: {len(corpora)}")
-for c in corpora[:5]:
-    print(f"{c.get('name')}: {c.get('title')}")
-:::
+Executed reference output:
 
-## Question 8 (coding) – Load corpus metadata as CSV into a DataFrame
+```{code-cell} ipython3
+:tags: [remove-input]
+import requests
 
-Student exercise (copy into your notebook, fill in, run):
+url = "https://dracor.org/api/v1/corpora"
+params = {"include": "metrics"}
+
+try:
+    r = requests.get(url, params=params, timeout=30)
+    if r.status_code != 200:
+        print(f"Request failed with status code: {r.status_code}")
+    else:
+        corpora = r.json()
+        print(f"Number of corpora: {len(corpora)}")
+        for c in corpora[:5]:
+            print(f"{c.get('name')}: {c.get('title')}")
+except Exception as e:
+    print(f"Request failed with error: {e}")
+```
+
+## Question 8
+
+Student exercise (copy into a notebook, fill in, run):
 
 ```python
 import requests
@@ -217,17 +240,16 @@ corpusname = "cal"  # you may change this, but keep it reasonably small for a qu
 # TODO: print:
 #   - number of rows (plays)
 #   - the median of stagePercentage (ignore missing values)
-#   - the top 3 plays by stagePercentage: playName + yearNormalized + stagePercentage
+#   - the top 3 plays by stagePercentage: play name + yearNormalized + stagePercentage
 ```
 
 Self-check:
 - DataFrame has one row per play.
 - You obtain numeric ratios between 0 and 1 (often a few percent as decimals).
 
-Reference solution:
-
-:::{code-cell} ipython3
-:tags: [remove-input]
+````{admonition} Reference solution (code)
+:class: tip, dropdown
+```python
 import requests
 import pandas as pd
 from io import StringIO
@@ -237,37 +259,74 @@ corpusname = "cal"
 
 meta_url = f"{API_URL}corpora/{corpusname}/metadata"
 r = requests.get(meta_url, headers={"Accept": "text/csv"}, timeout=30)
-r.raise_for_status()
 
-df = pd.read_csv(StringIO(r.text))
-print(f"Rows (plays): {len(df)}")
-
-# Robust column handling
-wc_text = "wordCountText"
-wc_stage = "wordCountStage"
-play_col = "name" if "name" in df.columns else ("playName" if "playName" in df.columns else None)
-year_col = "yearNormalized" if "yearNormalized" in df.columns else None
-
-if wc_text in df.columns and wc_stage in df.columns:
-    df["stagePercentage"] = df[wc_stage] / df[wc_text]
+if r.status_code != 200:
+    print(f"Request failed with status code: {r.status_code}")
 else:
-    raise KeyError("Expected columns wordCountText and wordCountStage not found in metadata CSV.")
+    df = pd.read_csv(StringIO(r.text))
+    print(f"Rows (plays): {len(df)}")
 
-median_val = df["stagePercentage"].dropna().median()
-print(f"Median stagePercentage: {median_val:.4f}")
+    df["stagePercentage"] = df["wordCountStage"] / df["wordCountText"]
+    median_val = df["stagePercentage"].dropna().median()
+    print(f"Median stagePercentage: {median_val:.4f}")
 
-sort_cols = ["stagePercentage"]
-top = df.sort_values(by=sort_cols, ascending=False).head(3)
+    play_col = "name" if "name" in df.columns else ("playName" if "playName" in df.columns else None)
+    year_col = "yearNormalized" if "yearNormalized" in df.columns else None
 
-for i, row in top.iterrows():
-    play_val = row[play_col] if play_col else "<unknown-play>"
-    year_val = int(row[year_col]) if year_col and pd.notna(row[year_col]) else "<unknown-year>"
-    print(f"{play_val} ({year_val}) — {row['stagePercentage']:.4f}")
-:::
+    top = df.sort_values(by="stagePercentage", ascending=False).head(3)
+    for _, row in top.iterrows():
+        play_val = row[play_col] if play_col else "<unknown-play>"
+        year_val = int(row[year_col]) if year_col and pd.notna(row[year_col]) else "<unknown-year>"
+        print(f"{play_val} ({year_val}) — {row['stagePercentage']:.4f}")
+```
+````
 
-## Question 9 (coding) – Handle status codes safely
+Executed reference output:
 
-Student exercise (copy into your notebook, run). The endpoint is intentionally wrong:
+```{code-cell} ipython3
+:tags: [remove-input]
+import requests
+import pandas as pd
+from io import StringIO
+
+API_URL = "https://dracor.org/api/v1/"
+corpusname = "cal"
+
+meta_url = f"{API_URL}corpora/{corpusname}/metadata"
+
+try:
+    r = requests.get(meta_url, headers={"Accept": "text/csv"}, timeout=30)
+    if r.status_code != 200:
+        print(f"Request failed with status code: {r.status_code}")
+    else:
+        df = pd.read_csv(StringIO(r.text))
+        print(f"Rows (plays): {len(df)}")
+
+        # Compute a ratio between 0 and 1
+        if "wordCountStage" in df.columns and "wordCountText" in df.columns:
+            df["stagePercentage"] = df["wordCountStage"] / df["wordCountText"]
+        else:
+            print("Expected columns wordCountStage and wordCountText not found in metadata CSV.")
+            df["stagePercentage"] = pd.NA
+
+        median_val = df["stagePercentage"].dropna().median()
+        print(f"Median stagePercentage: {median_val:.4f}")
+
+        play_col = "name" if "name" in df.columns else ("playName" if "playName" in df.columns else None)
+        year_col = "yearNormalized" if "yearNormalized" in df.columns else None
+
+        top = df.sort_values(by="stagePercentage", ascending=False).head(3)
+        for _, row in top.iterrows():
+            play_val = row[play_col] if play_col else "<unknown-play>"
+            year_val = int(row[year_col]) if year_col and pd.notna(row[year_col]) else "<unknown-year>"
+            print(f"{play_val} ({year_val}) — {row['stagePercentage']:.4f}")
+except Exception as e:
+    print(f"Request failed with error: {e}")
+```
+
+## Question 9
+
+Student exercise (copy into a notebook, run). The endpoint is intentionally wrong:
 
 ```python
 import requests
@@ -282,10 +341,9 @@ r = requests.get(url, timeout=30)
 Self-check:
 - You should get a non-200 status code (typically 404) and print it.
 
-Reference solution:
-
-:::{code-cell} ipython3
-:tags: [remove-input]
+````{admonition} Reference solution (code)
+:class: tip, dropdown
+```python
 import requests
 
 url = "https://dracor.org/api/v1/corpora/rus/plays/hamlet"
@@ -296,11 +354,31 @@ if r.status_code == 200:
     print(f"Play title: {data.get('title')}")
 else:
     print(f"Request failed with status code: {r.status_code}")
-:::
+```
+````
 
-## Question 10 (coding) – Request CSV via content negotiation and inspect the output
+Executed reference output:
 
-Student exercise (copy into your notebook, fill in, run):
+```{code-cell} ipython3
+:tags: [remove-input]
+import requests
+
+url = "https://dracor.org/api/v1/corpora/rus/plays/hamlet"
+
+try:
+    r = requests.get(url, timeout=30)
+    if r.status_code == 200:
+        data = r.json()
+        print(f"Play title: {data.get('title')}")
+    else:
+        print(f"Request failed with status code: {r.status_code}")
+except Exception as e:
+    print(f"Request failed with error: {e}")
+```
+
+## Question 10
+
+Student exercise (copy into a notebook, fill in, run):
 
 ```python
 import requests
@@ -316,10 +394,9 @@ url = f"https://dracor.org/api/v1/corpora/{corpusname}/plays/{playname}/characte
 Self-check:
 - You should see a header row (CSV column names), then character rows.
 
-Reference solution:
-
-:::{code-cell} ipython3
-:tags: [remove-input]
+````{admonition} Reference solution (code)
+:class: tip, dropdown
+```python
 import requests
 
 corpusname = "cal"
@@ -327,9 +404,34 @@ playname = "la-vida-es-sueno"
 url = f"https://dracor.org/api/v1/corpora/{corpusname}/plays/{playname}/characters"
 
 r = requests.get(url, headers={"Accept": "text/csv"}, timeout=30)
-r.raise_for_status()
 
-lines = [ln for ln in r.text.splitlines() if ln.strip()]
-for ln in lines[:5]:
-    print(ln)
-:::
+if r.status_code != 200:
+    print(f"Request failed with status code: {r.status_code}")
+else:
+    lines = [ln for ln in r.text.splitlines() if ln.strip()]
+    for ln in lines[:5]:
+        print(ln)
+```
+````
+
+Executed reference output:
+
+```{code-cell} ipython3
+:tags: [remove-input]
+import requests
+
+corpusname = "cal"
+playname = "la-vida-es-sueno"
+url = f"https://dracor.org/api/v1/corpora/{corpusname}/plays/{playname}/characters"
+
+try:
+    r = requests.get(url, headers={"Accept": "text/csv"}, timeout=30)
+    if r.status_code != 200:
+        print(f"Request failed with status code: {r.status_code}")
+    else:
+        lines = [ln for ln in r.text.splitlines() if ln.strip()]
+        for ln in lines[:5]:
+            print(ln)
+except Exception as e:
+    print(f"Request failed with error: {e}")
+```
