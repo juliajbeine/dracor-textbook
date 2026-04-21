@@ -17,7 +17,7 @@ kernelspec:
 This assessment helps you check your understanding of the chapter *<TEI Encoding: Preparing Texts for Programmable Corpora>*.
 
 - There is no grading and nothing is stored.
-- Read the feedback for each option carefully, also if you answered correctly.
+- Read the feedback for each option carefully, even if you answered correctly.
 - If you are unsure, return to the relevant section of the chapter (or the interface/tool) and verify what you see.
 
 Estimated time: <20–30 minutes>.
@@ -409,5 +409,7 @@ Do you see any differences? Reflect on the current state of LLM-powered encoding
 ```
 
 [^1] The text passage was taken from {cite}`baillie1789monfort, pp. 313-314`, and the format was slightly adapted for the exercise.
+
 [^1] The text passage was taken from {cite}`cowley2024belles`, and the format was slightly adapted for the exercise.
+
 [^1] The text passage was taken from {cite}`pixbeau`, and the format was slightly adapted for the exercise.
