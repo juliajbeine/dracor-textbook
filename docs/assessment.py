@@ -136,7 +136,7 @@ class DragDropQuiz:
                 <div class="description-zone">
                     <div class="description-label">{desc}</div>
                     <div class="drop-area" data-zone-id="{i}" id="{quiz_id}_drop_{i}">
-                        <span class="drop-placeholder">Hier ablegen</span>
+                        <span class="drop-placeholder">Drop here.</span>
                     </div>
                 </div>
             '''
@@ -292,15 +292,15 @@ class DragDropQuiz:
             </div>
 
             <div class="options-container">
-                <div class="options-title">Ziehen Sie die Elemente zu den passenden Beschreibungen.</div>
+                <div class="options-title">Drag and drop the elements to the correct statements.</div>
                 <div class="options-list" id="{quiz_id}_options">
                     {draggable_options}
                 </div>
             </div>
 
             <div class="quiz-controls">
-                <button class="quiz-button" onclick="checkAnswer_{quiz_id}()">Antwort prüfen</button>
-                <button class="quiz-button reset-button" onclick="resetQuiz_{quiz_id}()">Zurücksetzen</button>
+                <button class="quiz-button" onclick="checkAnswer_{quiz_id}()">Check the answer.</button>
+                <button class="quiz-button reset-button" onclick="resetQuiz_{quiz_id}()">Reset.</button>
             </div>
 
             <div id="{quiz_id}_feedback"></div>
