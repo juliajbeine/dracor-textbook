@@ -140,7 +140,7 @@ display_quiz(q5, max_width=1000)
 
 **You want to encode a corpus of 50 texts from a digital text collection. The format is HTML. Core elements, such as the headings, speaker names, or stage directions, are marked up regularly.**
 
-#### Ranking by time consumption
+_Note: The answers still need to be shuffled!_
 
 :::{code-cell} ipython3
 :tags: [remove-input]
@@ -165,7 +165,7 @@ quiz.create_matching_quiz(
 )
 :::
 
-#### Ranking by transparency and control
+_Note: The answers still need to be shuffled!_
 
 :::{code-cell} ipython3
 :tags: [remove-input]
@@ -323,7 +323,6 @@ Complete the encoding of the following passage from act 1, scene 2 of “De Monf
 <l>He serves as though he lov'd me. This pure air</l>
 <l>Braces the listless nerves, and warms the blood;</l>
 <l>I feel in freedom here.<ADD>
-</sp>
 <ADD>(Filling a cup of coffee, and drinking.)<ADD>
 </sp>
 <sp who="#manuel">
@@ -331,6 +330,30 @@ Complete the encoding of the following passage from act 1, scene 2 of “De Monf
 <ADD>Ah! sure, my Lord,<ADD>
 <ADD>No air is purer than the air at home.<ADD>
 <ADD>
+[...]
+</div>
+```
+
+Answer:  
+```xml
+<div type="scene" n="2">
+<head>SCENE II.</head>
+<stage>(A Small Apartment in JEROME'S House: a table and breakfast set out. Enter DE MONFORT, followed by MANUEL, and sets himself down by the table, with a cheerful face.)</stage>
+<sp who="#de-monfort">
+<speaker>DE MON.</speaker>
+<l>Manuel, this morning's sun shines pleasantly:</l>
+<l>These old apartments too are light and cheerful.</l>
+<l>Our landlord's kindness has reviv'd me much;</l>
+<l>He serves as though he lov'd me. This pure air</l>
+<l>Braces the listless nerves, and warms the blood;</l>
+<l>I feel in freedom here.</l>
+<stage>(Filling a cup of coffee, and drinking.)</stage>
+</sp>
+<sp who="#manuel">
+<speaker>MAN.</speaker>
+<l>Ah! sure, my Lord,</l>
+<l>No air is purer than the air at home.</l>
+</sp>
 [...]
 </div>
 ```
