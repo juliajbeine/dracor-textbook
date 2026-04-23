@@ -751,7 +751,7 @@ This chapter was drafted with the assistance of a large language model (Claude, 
 
 ## Next Steps
 
-* Continue with: [Chapter 5](05-infrastructure) to understand the main components that build the infrastructure of DraCor, and how to run it locally with Docker.
+* Continue with: [Chapter 5. Infrastructure](05-infrastructure) to understand the main components that build the infrastructure of DraCor, and how to run it locally with Docker.
 
 ## References
 
