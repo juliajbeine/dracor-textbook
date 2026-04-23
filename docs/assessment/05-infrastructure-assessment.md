@@ -14,11 +14,11 @@ kernelspec:
 
 ````{admonition} Note
 :class: note
-This self-test helps you check your understanding of the chapter *Infrastructure*.
+This self-test helps you check your understanding of *Infrastructure*.
 
 - There is no grading and nothing is stored.
 - Read the feedback for each option carefully, including when you answered correctly.
-- If you are unsure, return to the relevant section of the chapter and verify the answer.
+- If you are unsure, return to the relevant section and verify the answer.
 
 Estimated time: 10–15 minutes.
 ````
@@ -30,17 +30,17 @@ Estimated time: 10–15 minutes.
 from jupyterquiz import display_quiz
 
 q1 = [{
-  "question": "According to the chapter, why does understanding DraCor's infrastructure matter for research?",
+  "question": "Why does understanding DraCor's infrastructure matter for research?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "Because it allows researchers to avoid using the API entirely.", "correct": False,
-     "feedback": "Not quite. The chapter does not argue against the API. Instead, it explains why understanding the system behind the API improves trust, adaptation, and critical awareness."},
+     "feedback": "Not quite. The point is not to avoid the API, but to understand the system behind it and gain trust, adaptability, and critical awareness."},
     {"answer": "Because it helps build trust, enables adaptation, and fosters critical awareness of how data and metrics are produced.", "correct": True,
      "feedback": "Correct. These are the three main reasons given in the overview section."},
     {"answer": "Because only developers are allowed to use DraCor responsibly.", "correct": False,
-     "feedback": "No. The chapter is written for learners and researchers, not only developers."},
+     "feedback": "No. This material is aimed at learners and researchers, not only developers."},
     {"answer": "Because infrastructure mainly concerns server hardware, which humanists usually need to administer.", "correct": False,
-     "feedback": "No. The chapter presents infrastructure more broadly as a socio-technical system, not only as hardware administration."}
+     "feedback": "No. Infrastructure is presented here as a socio-technical system, not just hardware administration."}
   ]
 }]
 display_quiz(q1, max_width=1000)
@@ -53,13 +53,13 @@ display_quiz(q1, max_width=1000)
 from jupyterquiz import display_quiz
 
 q2 = [{
-  "question": "How does the chapter characterise DraCor from a technical perspective?",
+  "question": "How is DraCor characterised here from a technical perspective?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "As a single monolithic web application with one database and no external services.", "correct": False,
-     "feedback": "No. The chapter explicitly says DraCor is not a single application."},
+     "feedback": "No. DraCor is presented as more than a single application."},
     {"answer": "As a system of interconnected services maintained by a community and embedded in a broader infrastructure landscape.", "correct": True,
-     "feedback": "Correct. This formulation captures the chapter's central definition of DraCor as infrastructure."},
+     "feedback": "Correct. This captures the core definition of DraCor as infrastructure."},
     {"answer": "As a front-end visualisation tool that only displays data generated elsewhere.", "correct": False,
      "feedback": "Too narrow. The front-end is only one component of the overall system."},
     {"answer": "As a local desktop program used mainly for TEI editing.", "correct": False,
@@ -76,17 +76,17 @@ display_quiz(q2, max_width=1000)
 from jupyterquiz import display_quiz
 
 q3 = [{
-  "question": "Why does the chapter discuss DraCor's missing full-text search as an infrastructural example?",
+  "question": "Why is DraCor's missing full-text search discussed as an infrastructural example?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "Because the lack of search proves that DraCor is technically outdated and should be abandoned.", "correct": False,
-     "feedback": "No. The chapter does not frame this as a reason to abandon DraCor."},
+     "feedback": "No. This is not presented as a reason to abandon DraCor."},
     {"answer": "Because it shows that infrastructure reflects architectural choices shaped by specific research priorities, especially structural and network analysis.", "correct": True,
      "feedback": "Correct. The example illustrates how DraCor's design grew out of particular research questions and priorities."},
     {"answer": "Because full-text search is impossible in XML databases such as eXist-db.", "correct": False,
-     "feedback": "No. The chapter does not claim that XML databases cannot support search."},
+     "feedback": "No. There is no claim that XML databases cannot support search."},
     {"answer": "Because search is available only in local DraCor instances, not at dracor.org.", "correct": False,
-     "feedback": "Incorrect. The point is that search was not built into the core design described in the chapter."}
+     "feedback": "Incorrect. The point is that search was not built into the core design being discussed."}
   ]
 }]
 display_quiz(q3, max_width=1000)
@@ -99,17 +99,17 @@ display_quiz(q3, max_width=1000)
 from jupyterquiz import display_quiz
 
 q4 = [{
-  "question": "Which statement best matches the chapter's explanation of tactical infrastructure?",
+  "question": "Which statement best matches the explanation of tactical infrastructure?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "It is a centralised platform imposed from above and designed before researchers define their needs.", "correct": False,
-     "feedback": "No. That is the opposite of the tactical approach described in the chapter."},
+     "feedback": "No. That is the opposite of the tactical approach described here."},
     {"answer": "It is an infrastructure that grows bottom-up from concrete research needs, tools, practices, people, and code.", "correct": True,
-     "feedback": "Correct. This summarises the chapter's discussion of tactical infrastructure and its relevance for DraCor and CLS INFRA."},
+     "feedback": "Correct. This summarises tactical infrastructure and its relevance for DraCor and CLS INFRA."},
     {"answer": "It is a military metaphor used to describe secure server management.", "correct": False,
      "feedback": "No. The term is used conceptually, not in a military or security sense."},
     {"answer": "It refers only to temporary prototypes that should never become sustainable infrastructures.", "correct": False,
-     "feedback": "Not quite. The chapter uses the term to describe a bottom-up ecosystem, not merely a temporary prototype."}
+     "feedback": "Not quite. The term is used for a bottom-up ecosystem, not merely a temporary prototype."}
   ]
 }]
 display_quiz(q4, max_width=1000)
@@ -122,13 +122,13 @@ display_quiz(q4, max_width=1000)
 from jupyterquiz import display_quiz
 
 q5 = [{
-  "question": "What is the role of eXist-db in the DraCor system, according to the chapter?",
+  "question": "What is the role of eXist-db in the DraCor system?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "It is the core XML database in which the DraCor API is implemented as an eXist-db application written in XQuery.", "correct": True,
-     "feedback": "Correct. The chapter identifies eXist-db as the core database and explains that the API logic is implemented there in XQuery."},
+     "feedback": "Correct. eXist-db is the core database, and the API logic is implemented there in XQuery."},
     {"answer": "It is a graphical front-end for editing TEI documents in the browser.", "correct": False,
-     "feedback": "No. That is not how eXist-db is described in the chapter."},
+     "feedback": "No. That is not how eXist-db is described here."},
     {"answer": "It is the Python service that calculates network metrics.", "correct": False,
      "feedback": "No. That role belongs to the separate Metrics Service."},
     {"answer": "It is the RDF triple store used for SPARQL queries.", "correct": False,
@@ -145,13 +145,13 @@ display_quiz(q5, max_width=1000)
 from jupyterquiz import display_quiz
 
 q6 = [{
-  "question": "Why does the chapter describe the Metrics Service as an example of a microservice architecture?",
+  "question": "Why is the Metrics Service presented as an example of a microservice architecture?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "Because it stores all TEI files in a separate GitHub repository.", "correct": False,
      "feedback": "No. GitHub repositories are discussed elsewhere, but that is not what makes the Metrics Service a microservice."},
     {"answer": "Because it is a specialised external service that calculates network metrics and communicates with the rest of the system via APIs.", "correct": True,
-     "feedback": "Correct. The chapter uses this component to illustrate how specialised services can handle specific tasks within a larger system."},
+     "feedback": "Correct. This component illustrates how specialised services can handle specific tasks within a larger system."},
     {"answer": "Because it replaces the front-end whenever the React application is unavailable.", "correct": False,
      "feedback": "No. The Metrics Service does not replace the front-end."},
     {"answer": "Because it runs inside the user's browser as part of the single-page application.", "correct": False,
@@ -168,15 +168,15 @@ display_quiz(q6, max_width=1000)
 from jupyterquiz import display_quiz
 
 q7 = [{
-  "question": "What is one of the chapter's main reasons for running DraCor locally with Docker?",
+  "question": "What is one major reason for running DraCor locally with Docker?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "It is the only way to use the DraCor API at all.", "correct": False,
-     "feedback": "No. Earlier chapters already use the public API at dracor.org."},
+     "feedback": "No. The public API at dracor.org can already be used without a local setup."},
     {"answer": "It allows researchers to work with a controlled version of the data and software, which supports reproducibility.", "correct": True,
-     "feedback": "Correct. The chapter emphasises version control, independence from the production server, and reproducibility."},
+     "feedback": "Correct. The key advantages include version control, independence from the production server, and reproducibility."},
     {"answer": "It automatically adds full-text search to all corpora.", "correct": False,
-     "feedback": "No. The chapter does not present local deployment as a solution to that feature gap."},
+     "feedback": "No. Local deployment is not presented as a solution to that feature gap."},
     {"answer": "It removes the need for TEI-encoded source texts.", "correct": False,
      "feedback": "Incorrect. Local DraCor still depends on DraCor-compatible TEI data."}
   ]
@@ -191,7 +191,7 @@ display_quiz(q7, max_width=1000)
 from jupyterquiz import display_quiz
 
 q8 = [{
-  "question": "According to the chapter, what is the difference between a Docker image and a Docker container?",
+  "question": "What is the difference between a Docker image and a Docker container?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "An image is a running service, whereas a container is the static file stored on DockerHub.", "correct": False,
@@ -200,8 +200,8 @@ q8 = [{
      "feedback": "Correct. This is the basic distinction explained in the Docker section."},
     {"answer": "An image is used only for databases, whereas a container is used only for front-end applications.", "correct": False,
      "feedback": "No. The distinction is not based on application type."},
-    {"answer": "There is no practical difference; the chapter uses the two words interchangeably.", "correct": False,
-     "feedback": "Incorrect. The chapter clearly distinguishes between them."}
+    {"answer": "There is no practical difference; the two words are used interchangeably.", "correct": False,
+     "feedback": "Incorrect. The distinction is made quite clearly."}
   ]
 }]
 display_quiz(q8, max_width=1000)
@@ -218,11 +218,11 @@ q9 = [{
   "type": "multiple_choice",
   "answers": [
     {"answer": "First calculate network metrics manually, then upload the front-end, then create a GitHub issue.", "correct": False,
-     "feedback": "No. That is not the workflow described in the chapter."},
+     "feedback": "No. That is not the workflow described here."},
     {"answer": "First register the corpus by posting its metadata, then trigger loading of the actual play data.", "correct": True,
-     "feedback": "Correct. The chapter explicitly presents corpus loading as a two-step process: register, then load."},
+     "feedback": "Correct. Corpus loading is presented as a two-step process: register, then load."},
     {"answer": "First open the front-end in the browser, then drag and drop TEI files, then restart Docker.", "correct": False,
-     "feedback": "No. The chapter describes loading through admin API endpoints, not drag-and-drop through the interface."},
+     "feedback": "No. Loading is described through admin API endpoints, not drag-and-drop through the interface."},
     {"answer": "First send JSON metadata to the Metrics Service, then export RDF to the triple store.", "correct": False,
      "feedback": "Incorrect. That does not match the described workflow."}
   ]
@@ -237,13 +237,13 @@ display_quiz(q9, max_width=1000)
 from jupyterquiz import display_quiz
 
 q10 = [{
-  "question": "How does the chapter describe the front-end in relation to the API?",
+  "question": "How is the front-end described in relation to the API?",
   "type": "multiple_choice",
   "answers": [
     {"answer": "As an independent data source that does not rely on the API once the page has loaded.", "correct": False,
-     "feedback": "No. The chapter stresses that the front-end communicates with the API throughout its operations."},
+     "feedback": "No. The front-end communicates with the API throughout its operations."},
     {"answer": "As an API client: a React single-page application that sends requests to the DraCor API and displays the results.", "correct": True,
-     "feedback": "Correct. This directly matches the chapter's description of the front-end."},
+     "feedback": "Correct. This directly matches the description of the front-end."},
     {"answer": "As a replacement for the API, used only when the XML database is offline.", "correct": False,
      "feedback": "Incorrect. The front-end depends on the API rather than replacing it."},
     {"answer": "As a command-line tool that wraps curl requests for beginners.", "correct": False,
