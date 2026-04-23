@@ -272,7 +272,7 @@ In this chapter we moved from using DraCor to understanding it. We saw that DraC
 
 ```{admonition} Self-test
 :class: tip
-Open the [Self-test: API](../assessment/05-infrastructure-assessment).
+Open the [Self-test: Infrastructure](../assessment/05-infrastructure-assessment).
 ```
 
 ## Teaching Notes
