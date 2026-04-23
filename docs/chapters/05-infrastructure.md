@@ -270,7 +270,10 @@ In this chapter we moved from using DraCor to understanding it. We saw that DraC
 
 ## Exercises
 
-TODO — draft to be developed.
+```{admonition} Self-test
+:class: tip
+Open the [Self-test: API](../assessment/05-infrastructure-assessment).
+```
 
 ## Teaching Notes
 

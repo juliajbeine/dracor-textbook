@@ -701,7 +701,10 @@ Along the way, we encountered core API concepts — REST, endpoints, HTTP method
 
 ## Exercises
 
-TBD
+```{admonition} Self-test
+:class: tip
+Open the [Self-test: API](../assessment/04-api-working-with-dracor-programmatically-assessment).
+```
 
 ## Teaching Notes
 
