@@ -4,6 +4,11 @@ root: index
 parts:
   - caption: "Book 1: Chapters"
     chapters:
+      - file: chapters/02-02-tei-encoding-preparing-texts-for-programmable-corpora
+        title: "2.2 TEI Encoding: Preparing Texts for Programmable Corpora"
+        sections:
+          - file: assessment/02-02-tei-encoding-assessment
+            title: "Self-test: TEI Encoding"
       - file: chapters/03-front-end-navigating-dracor
         title: "3. Front-end: Navigating DraCor"
         sections:
