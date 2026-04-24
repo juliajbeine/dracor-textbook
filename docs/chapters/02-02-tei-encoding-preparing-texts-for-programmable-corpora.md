@@ -2,7 +2,7 @@
 title: "TEI Encoding: Preparing Texts for Programmable Corpora"
 myst:
   substitutions:
-  chap_title: "TEI Encoding"
+   chap_title: "TEI Encoding"
 authors: "Julia Jennifer Beine; Daniil Skorinkin"
 date: "2026-04-21"
 description: "In this chapter, we introduce the basics of encoding dramatic texts in eXtensible Markup Language (XML) for DraCor, following the Guidelines for Electronic Text Encoding and Interchange by the Text Encoding Initiative (TEI)."
@@ -48,9 +48,9 @@ After completing this chapter, learners will be able to:
 
 ### 4.1. XML Basics
 
-The e**X**tensible **M**arkup **L**anguage (XML) is a method for marking up texts and encoding information. When using XML, so-called markups or encodings are added to a text {cite}`vogeler2017xml, p. 128`. For instance, in the case of dramatic texts, titles, cast lists, character speeches, or stage directions may be marked up as such. This way, markups in XML make the structure of a dramatic text visible and enable the information to be processed digitally {cite}`vogeler2017xml, p. 128`. If multiple texts are marked up following the same ‘stylesheet’, they may be processed and analysed similarly. In fact, this feature of XML encoding is what basically makes the DraCor corpora “programmable” {cite}`fischer2019programmable`. We will explain this step by step.
+The e**X**tensible **M**arkup **L**anguage (XML) is a method for marking up texts and encoding information. When using XML, so-called markups or encodings are added to a text {cite:p}`vogeler2017xml{p. 128}`. For instance, in the case of dramatic texts, titles, cast lists, character speeches, or stage directions may be marked up as such. This way, markups in XML make the structure of a dramatic text visible and enable the information to be processed digitally {cite:p}`vogeler2017xml{p. 128}`. If multiple texts are marked up following the same ‘stylesheet’, they may be processed and analysed similarly. In fact, this feature of XML encoding is what basically makes the DraCor corpora “programmable” {cite}`fischer2019programmable`. We will explain this step by step.
 
-XML is a rather user-friendly format. Markups in XML use the same character system used in the text itself, often Unicode (UTF-8). Therefore, both humans and machines can read XML {cite}`vogeler2017xml, p. 128`. Moreover, XML markups have a very prominent feature you may spot in the following example. In the first picture, you may see the formatted text from the opening of Shakespeare’s “Macbeth”, translated by Dorothea Tieck, and in the second picture, the related XML file {cite}`shakespeare2021ffmacbeth`:
+XML is a rather user-friendly format. Markups in XML use the same character system used in the text itself, often Unicode (UTF-8). Therefore, both humans and machines can read XML {cite:p}`vogeler2017xml{p. 128}`. Moreover, XML markups have a very prominent feature you may spot in the following example. In the first picture, you may see the formatted text from the opening of Shakespeare’s “Macbeth”, translated by Dorothea Tieck, and in the second picture, the related XML file {cite}`shakespeare2021ffmacbeth`:
 
 ```{figure} ../images/tei-encoding/macbeth-formatted.jpg
 ---
@@ -87,9 +87,9 @@ Elements may be further specified by so-called **attributes**, see the following
 
 While most of the play is written in Neo-Latin, this passage is written in Ancient Greek, which is marked up as a `<foreign>` element. The attribute `@xml:lang` has the value `grc`, the language code for Ancient Greek, and, thus, further specifies the `<foreign>` element.
 
-As you may have noticed, XML elements are always nested. Each element has to be completely contained by another element, except for the root element. The root element contains all other elements at the highest level. Moreover, elements are sorted hierarchically and sequentially and must not overlap. This **nesting** of the elements creates a tree structure, with the elements being called nodes {cite}`vogeler2017xml, pp. 130-131`. You may also think of an XML document as a box that contains a smaller box that contains a smaller box, and so on. If all the XML rules are followed, an XML document is called well-formed {cite}`vogeler2017xml, p. 131`.
+As you may have noticed, XML elements are always nested. Each element has to be completely contained by another element, except for the root element. The root element contains all other elements at the highest level. Moreover, elements are sorted hierarchically and sequentially and must not overlap. This **nesting** of the elements creates a tree structure, with the elements being called nodes {cite:p}`vogeler2017xml{p. 130-131}`. You may also think of an XML document as a box that contains a smaller box that contains a smaller box, and so on. If all the XML rules are followed, an XML document is called well-formed {cite:p}`vogeler2017xml{p. 131}`.
 
-After describing the basics of the XML markup procedure, we would like to elaborate on the “X” in “XML”, which stands for “extensible”. This means that elements or tags may be ‘invented’ if certain general rules are considered {cite}`vogeler2017xml, p. 133`. This feature results in a certain openness of XML for further development and enrichment. At the same time, if XML files marked up by different persons are supposed to be interoperable and reusable, standards for XML files are required, especially in research. Hence, different markup guidelines for XML files have been developed. For the humanities, a common standard is the Guidelines for Electronic Text Encoding and Interchange by the Text Encoding Initiative (TEI).
+After describing the basics of the XML markup procedure, we would like to elaborate on the “X” in “XML”, which stands for “extensible”. This means that elements or tags may be ‘invented’ if certain general rules are considered {cite:p}`vogeler2017xml{p. 133}`. This feature results in a certain openness of XML for further development and enrichment. At the same time, if XML files marked up by different persons are supposed to be interoperable and reusable, standards for XML files are required, especially in research. Hence, different markup guidelines for XML files have been developed. For the humanities, a common standard is the Guidelines for Electronic Text Encoding and Interchange by the Text Encoding Initiative (TEI).
 
 ### 4.2. TEI Basics
 
