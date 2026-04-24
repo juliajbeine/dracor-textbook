@@ -399,7 +399,7 @@ The third way is with the help of an LLM. One of the practical advantages of EzD
 
 ```{admonition} Assessment
 :class: tip
-Open the [Assessment: TEI Encoding](../assessment/02-02-tei-encoding-assessment.html#exercise-1-encoding-strategy).
+Open the [Assessment: TEI Encoding](../assessment/02-02-tei-encoding-assessment.md#exercise-1-encoding-strategy).
 ```
 
 ### Exercise 2: Manual Encoding
