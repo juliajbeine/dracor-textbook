@@ -304,7 +304,7 @@ Three significant **challenges** remain with this approach. First, there are siz
 #### 4.3.6. Semi-Automatic Encoding with EzDrama
 
 Between the extremes of simple regular expression scripts and full TEI file generation with LLMs lies the intermediary markup tool EzDrama. In the practice of building DraCor corpora from unstructured or weakly structured sources, the DraCor community developed EzDrama as an intermediary format and encoding tool {cite}`dracor2022ff.easy`. EzDrama is a lightweight markup language designed specifically for dramatic texts. It serves as a middle layer between plain text and fully structured TEI/XML – a stepping stone that is easy for humans to write and read, and that can be converted to valid TEI automatically by a rule-based Python script. Here is an example of a mock play in three forms: raw text, EzDrama markup, and the TEI/XML that is generated automatically with EzDrama.
-```{figure} ../images/tei-encoding/llm-prompt-2.jpg
+```{figure} ../images/tei-encoding/ezdrama.png
 ---
 alt: "A model mock play as plain text, with EzDrama"
 width: 100%
