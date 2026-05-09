@@ -282,7 +282,7 @@ It is worth emphasising that `tc2dracor.xq` is a substantial script – not a sh
 When no reliable, consistent pre-existing markup is available – when the source is essentially plain text – the encoding situation is different. There is no structure to transform; the structure must be created (or one could say, inferred from the text). The approaches available here span a wide range, from simple rule-based scripts to LLMs, differing in the level of human control, the complexity of the tooling, and the kinds of errors they tend to produce.
 
 As of 2026, a modern LLM is typically smart enough to convert the plain text of a drama (in any relatively well-resourced language, at least) into a full-blown DraCor TEI, taking into account the dramatic structure, stage directions, and identifying speakers. In the simplest form, a prompt with an attached plain text of a play may look as follows:
-```{figure} ../images/tei-encoding/llm-prompt-1.jpg
+```{figure} ../images/tei-encoding/llm-prompt-1.png
 ---
 alt: "Prompting Claude Sonnet 4.6 to encode a plain text of a play in DraCor TEI."
 width: 100%
@@ -291,7 +291,7 @@ width: 100%
 *Example: Prompting Claude Sonnet 4.6 {cite}`anthropic2026introducingsonnet` to encode a plain text of a play in DraCor-style TEI/XML.*
 
 Given a prompt that explains the desired encoding conventions and a sample of the text, a large language model, such as Claude {cite}`anthropic2026introducingopus`, GPT {cite}`openai2026gpt53`, Gemini {cite}`googledeepmind2026gemini`, or Mistral {cite}`mistralai2025introducing`, can produce output that correctly identifies speakers, speech, stage directions, and structural divisions (acts, scenes). 
-```{figure} ../images/tei-encoding/llm-prompt-2.jpg
+```{figure} ../images/tei-encoding/llm-prompt-2.png
 ---
 alt: "Claude Sonnet 4.6 outputting a play in DraCor TEI."
 width: 100%
